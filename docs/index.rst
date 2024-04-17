@@ -89,6 +89,7 @@ BLS Modules
 
 .. autofunction:: bls.scheme.verify(params, aggr_vk, sigma, m)
 
+.. autofunction:: bls.scheme.aggregate_verify(params, vks, sigma, m)
 
 Indices and tables
 ==================
