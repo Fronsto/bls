@@ -52,7 +52,7 @@ def test_distinct_messages_with_multi_authorities():
 	(sk, vk) = ttp_keygen(params, n, n)
 
 	# sign
-	sigs = [sign(params, ski, [mi]) for ski,mi in zip(sk,m)]
+	sigs = [sign_unique(params, ski, [mi]) for ski,mi in zip(sk,m)]
 
 	# aggregate credentials
 	sigma = aggregate_sigma(params, sigs, threshold=False)
