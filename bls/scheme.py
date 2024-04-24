@@ -174,8 +174,8 @@ def aggregate_verify(params, vks, sigma, m):
         To be used with sign_unique, since distinct meesages are required 
 		to prevent rogue public key attacks. 
 	"""
+	assert(len(vks) == len(set(vks)))
 	(G, o, g1, g2, e) = params
-
 	rhs = GTElem.one(G)
 	for mi, vki in zip(m,vks):
 		message = [mi, vki.export()]
